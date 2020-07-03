@@ -3,7 +3,7 @@ import Image from '../../images/bg.jpg';
 
 export const Container = styled.section`
   width: 100% !important;
-  height: 100vh;
+  height: 98vh;
 
   display: flex;
   flex-direction: column;
@@ -85,33 +85,55 @@ export const Content = styled.div`
     padding: 0.5rem;
     display: flex;
     align-items: center;
+    position: relative;
 
     input, button{
+      -moz-appearance: none;
+      -webkit-appearance: none;
+      appearance: none;
       outline: none;
+      border: none;
     }
     input{
       border-top-left-radius: .3rem;
       border-bottom-left-radius: .3rem;
-
-      border-top: 0;
-      border-left: 0;
-      border-right: 0;
+   
       border-bottom: 2px solid #ffa00a;
+      position: relative;
       width: 30rem;
-      height: 4rem;
+      min-height: 60px;
 
-      padding: .5rem;
+      padding: 0 .3rem;
 
       outline: none;
+      font-size: 1rem;
+    }
+    input ~ label{
+      z-index: 1;
+      color: #000;
+      position: absolute;
+      right: 0;
+      left: -90%;
+      transition: .4s;
+    }
+    input:focus ~ label, input:valid ~ label{
+      color: #000a;
+      transform: translateY(-18px);
+      font-size: 14px;
+      letter-spacing: .1em;
     }
     button{
-      height: 4rem;
+      display: inline-flex;
+      white-space: nowrap;
+      align-items: center;
+      min-height: 60px;
       font-size: 1.6rem;
       color: var(--font-white);
-      padding: 0rem 2rem;
+      padding: 0 1rem;
       background: #f40612;
 
-      border-style: none;
+      border-top-right-radius: 4px;
+      border-bottom-right-radius: 4px;
 
       cursor: pointer;
     }

@@ -38,7 +38,7 @@ npm run test
 
 👤 **Felipe Augustos**
 
-* Twitter: [@userAugustos](https://twitter.com/userAugustos)
+* Twitter: [@AugustosUser](https://twitter.com/AugustosUser)
 * Github: [@userAugustos](https://github.com/userAugustos)
 
 ## Show your support

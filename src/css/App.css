@@ -20,7 +20,7 @@ body{
   font-size: 100%;
   font-family: 'Helvetica';
   -webkit-font-smoothing: antialiased;
-  /* background: var(--main-dark); */
+  background: var(--main-dark);
   color: var(--font-white);
 }
 a, li{
