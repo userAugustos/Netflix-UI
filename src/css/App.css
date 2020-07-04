@@ -5,6 +5,7 @@
   --main-red-serialized: #fa3434;
   --main-dark: rgba(20, 20, 20);
   --main-deep-dark: rgba(0, 0, 0);
+  --darked-grey: #303030;
   --main-grey: rgba(153, 153, 153, .5);
   --font-white: rgba(246, 245, 255);
 }
@@ -24,6 +25,11 @@ body{
   color: var(--font-white);
 }
 a, li{
+  color: inherit;
   text-decoration: none;
   list-style: none;
+}
+button{
+  cursor: pointer;
+  outline: none;
 }

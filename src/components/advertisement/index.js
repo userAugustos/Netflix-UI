@@ -35,7 +35,7 @@ function Advertisement() {
       <VideoAd isDesktop={props.isDesktop}>
         <img src={props.image} alt=""/>
         {props.isMobile ? <CardMobile image={props.image} /> : ''}
-        {props.hasVideo ? <video autoPlay muted > <source src={props.video}/> </video> : '' }
+        {props.hasVideo ? <video autoPlay muted loop > <source src={props.video}/> </video> : '' }
       </VideoAd>
       </>
     );

@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const Container = styled.main`
+export const Container = styled.section`
   margin-top: 1rem;
 
   width: 100%;
