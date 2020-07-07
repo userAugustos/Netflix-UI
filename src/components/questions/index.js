@@ -13,33 +13,37 @@ import { LargeEmailInput } from '../header/styles';
 
 function Questions() {
   const history = useHistory();
-  const [dropdown, setDropdown] = useState(true);
+  const [dropdown, setDropdown] = useState(false);
 
-  function handleButtonClick(id){
-    setDropdown(!dropdown)
+  function handleClickButton(id){
+    if(id == 1){
+      setDropdown(!dropdown)
+    }
   }
 
   function Askbar(props) {
     return (
       <Content>
-        <AskBar type="button" onClick={(event) => handleButtonClick(event.target.id)} id={props.id}>
+        <AskBar type="button" onClick={(event) => handleClickButton(event.target.id) } id={props.id}>
           {props.title}
-          <Icon icon={dropdown ? plus : thinDown } size="32px"/>
+          <Icon icon={dropdown ? thinDown : plus } size="32px"/>
         </AskBar>
-        <Dropdown className="isClosed">
+        {dropdown && (
+        <Dropdown>
           <p>{props.answer}</p>
         </Dropdown>
+        )}
       </Content>
     );
   }
   return (
     <Container>
       <h1>Perguntas Frequentes</h1>
-      <Askbar title="O que é a Netflix? " answer="resposta" id={1}/>
-      <Askbar title="Quanto custa a Netflix?" answer="resposta" id={2}/>
-      <Askbar title="Onde posso assistir?" answer="resposta" id={3} />
-      <Askbar title="Como faço para cancelar?" id={4} />
-      <Askbar title="O que eu posso assistir na Netflix?" id={5}/>
+      <Askbar title="O que é a Netflix?" answer="resposta" id={1}/>
+      <Askbar title="Quanto custa a Netflix?" answer="resposta"/>
+      <Askbar title="Onde posso assistir?" answer="resposta" />
+      <Askbar title="Como faço para cancelar?" answer="resposta" />
+      <Askbar title="O que eu posso assistir na Netflix?"answer="resposta"/>
 
       <LargeEmailInput>
         <input type="email" name="email-askbar" id="email-askbar" required placeholder="Email"/>

@@ -16,35 +16,35 @@ function Footer() {
     );
   }
   return(
-    <Container>
+    <Container id="footer">
       <div>
         <h2> Dúvidas? Ligue 0800-761-4631 </h2>
       </div>
       <Lists>
         <ul>
-          <RenderList src="/" text="Perguntas frequentes"/>
-          <RenderList src="/" text="Relações com investidores"/>
-          <RenderList src="/" text="Formas de assistir"/>
-          <RenderList src="/" text="Informações corporativas"/>
-          <RenderList src="/" text="Originais Netflix" />
+          <RenderList src="#footer" text="Perguntas frequentes"/>
+          <RenderList src="#footer" text="Relações com investidores"/>
+          <RenderList src="#footer" text="Formas de assistir"/>
+          <RenderList src="#footer" text="Informações corporativas"/>
+          <RenderList src="#footer" text="Originais Netflix" />
         </ul>
         <ul>
-          <RenderList src="/" text="Centro de ajuda"/>
-          <RenderList src="/" text="Carreiras" />
-          <RenderList src="/" text="Termos de uso"/>
-          <RenderList src="/" text="Entre em contato"/>
+          <RenderList src="#footer" text="Centro de ajuda"/>
+          <RenderList src="#footer" text="Carreiras" />
+          <RenderList src="#footer" text="Termos de uso"/>
+          <RenderList src="#footer" text="Entre em contato"/>
         </ul>
         <ul>
-          <RenderList src="/" text="Conta"/>
-          <RenderList src="/" text="Resgatar cartão pré-pago"/>
-          <RenderList src="/" text="Privacidade" />
-          <RenderList src="/" text="Teste de velocidade" />
+          <RenderList src="#footer" text="Conta"/>
+          <RenderList src="#footer" text="Resgatar cartão pré-pago"/>
+          <RenderList src="#footer" text="Privacidade" />
+          <RenderList src="#footer" text="Teste de velocidade" />
         </ul>
         <ul>
-          <RenderList src="/" text="Imprensa" />
-          <RenderList src="/" text="Comprar cartão pré-pago" />
-          <RenderList src="/" text="Preferências de cookies" />
-          <RenderList src="/" text="Avisos legais" />
+          <RenderList src="#footer" text="Imprensa" />
+          <RenderList src="#footer" text="Comprar cartão pré-pago" />
+          <RenderList src="#footer" text="Preferências de cookies" />
+          <RenderList src="#footer" text="Avisos legais" />
         </ul>
       </Lists>
       <Language>
