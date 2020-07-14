@@ -14,8 +14,12 @@ export const Container = styled.div`
   justify-content: space-evenly;
   align-items: start;
 
-  padding: 2rem 15rem;
+  padding: 2rem;
 
+  div{
+    margin: 0 auto;
+    align-self: flex-start;
+  }
   li{
     color: var(--main-grey);
     font-size: .8rem;
@@ -56,6 +60,8 @@ export const Language = styled.div`
 
 export const Lists = styled.div`
   width: 90%;
+  max-width: 800px;
+
   justify-self: self-start;
   display: flex;
   justify-content: space-between;

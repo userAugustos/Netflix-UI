@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import Image from "../../images/bg.jpg";
+import styled from 'styled-components';
+import Image from '../../images/bg.jpg';
 
 export const Container = styled.section`
   width: 100% !important;
@@ -13,7 +13,7 @@ export const Container = styled.section`
     url(${Image}) no-repeat center center/cover;
 
   &::after {
-    content: "";
+    content: '';
     position: absolute;
     top: 0;
     left: 0;
@@ -41,7 +41,7 @@ export const HeaderTop = styled.div`
     line-height: normal;
     font-size: 1rem;
 
-    border-radius: 0.4em;
+    border-radius: 0.2em;
 
     color: var(--font-white);
     background: var(--main-red);
@@ -54,7 +54,7 @@ export const HeaderTop = styled.div`
     }
   }
   img {
-    width: 10rem;
+    width: 8rem;
     height: 3rem;
     cursor: pointer;
   }
@@ -66,18 +66,21 @@ export const Content = styled.div`
   margin-top: 8%;
   justify-self: center;
   align-self: center;
+  flex-wrap: wrap;
 
-  width: 55vw;
+  width: 100%;
+  max-width: 760px;
 
   padding: 2rem 3rem;
   text-align: center;
 
   h1 {
-    font-size: 3.5em;
+    font-size: 3.2em;
+    font-weight: 600;
     margin: 15px auto;
   }
   h2 {
-    font-size: 1.8em;
+    font-size: 1.6em;
     font-weight: 500;
   }
 `;
@@ -87,7 +90,12 @@ export const LargeEmailInput = styled.div`
   padding: 0.5rem;
   display: flex;
   align-items: center;
+  justify-content: center;
   position: relative;
+  flex-wrap: wrap;
+
+  width: 100%;
+
 
   input,
   button {
@@ -100,11 +108,10 @@ export const LargeEmailInput = styled.div`
   input {
     border-top-left-radius: 0.3rem;
     border-bottom-left-radius: 0.3rem;
-    border-right: 1.5px solid #000a;
 
     border-bottom: 2px solid #ffa00a;
     position: relative;
-    width: 30rem;
+    width: 70%;
     min-height: 60px;
 
     padding: 0 0.3rem;
@@ -119,6 +126,10 @@ export const LargeEmailInput = styled.div`
     right: 0;
     left: -90%;
     transition: 0.4s;
+    @media screen and (max-width: 700px){
+      top: 20%;
+      left: -55%;
+    }
   }
   input:focus ~ label,
   input:valid ~ label {
@@ -133,13 +144,15 @@ export const LargeEmailInput = styled.div`
     align-items: center;
     min-height: 60px;
     font-size: 1.6rem;
+    width: 30%;
+    min-width: 180px;
     color: var(--font-white);
     padding: 0 1.5rem;
     background: #f40612;
 
     border-top-right-radius: 4px;
     border-bottom-right-radius: 4px;
-
+    border-left: 1px solid #404040;
     cursor: pointer;
   }
 `;

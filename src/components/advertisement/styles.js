@@ -4,7 +4,8 @@ export const Container = styled.section`
   margin-top: 1rem;
 
   width: 100%;
-  height: 70vh;
+  height: 100%;
+  max-height: 700px;
 
   background: var(--main-deep-dark);
 
@@ -12,6 +13,10 @@ export const Container = styled.section`
   flex-direction: ${props => props.reverse ? 'row-reverse' : 'row'};
   justify-content: space-between;
   align-items: center;
+  
+  @media screen and (max-width: 700px){
+    flex-wrap: wrap-reverse;
+  }
 
   padding: 2rem 2rem;
 `;
@@ -73,8 +78,11 @@ export const Card = styled.div`
   position: absolute;
   top: 65%;
   left: 17%;
-
-  width: 20rem;
+  @media screen and (max-width: 700px){
+    left: 0;
+    width: 80%;
+  }
+  width: 60%;
 
   background: var(--main-deep-dark);
 
@@ -90,14 +98,17 @@ export const Card = styled.div`
 
   .image{
     margin-left: -20px;
-    width: 50px;
-    height: 70px;
+    width: 10%;
+    height: 18%;
+  }
+  strong{
+    font-size: 1em;
   }
   span{
     color: #0071eb;
     font-weight: 400;
     letter-spacing: .1;
-    font-size: 13px;
+    font-size: .8em;
   }
   div{
     display: flex;

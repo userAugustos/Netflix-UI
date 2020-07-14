@@ -13,7 +13,7 @@ import Tvideo from '../../images/video-tab-tv.m4v';
 import DeviceVideo from '../../images/video-devices.m4v';
 
 function Advertisement() {
-  function CardMobile(props){
+  function CardMobile(){
     return(
       <Card>
         <img src={BoxShot} alt="" className="image"/>
