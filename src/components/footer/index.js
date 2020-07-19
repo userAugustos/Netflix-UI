@@ -6,15 +6,8 @@ import {world} from 'react-icons-kit/typicons/world';
 
 import { Container, Language, Lists, WithLove } from './styles';
 
-function Footer() {
+function Footer(props) {
 
-  function RenderList(props){
-    return(
-      <li>
-        <a href={props.src}>{props.text}</a>
-      </li>
-    );
-  }
   return(
     <Container id="footer">
       <div>
@@ -22,29 +15,32 @@ function Footer() {
       </div>
       <Lists>
         <ul>
-          <RenderList src="#footer" text="Perguntas frequentes"/>
-          <RenderList src="#footer" text="Relações com investidores"/>
-          <RenderList src="#footer" text="Formas de assistir"/>
-          <RenderList src="#footer" text="Informações corporativas"/>
-          <RenderList src="#footer" text="Originais Netflix" />
+          {props.firstList && props.firstList.map((text, index) => (
+            <li key={index} >
+              <a href="#footer">{text}</a>
+            </li>
+          ))}
         </ul>
         <ul>
-          <RenderList src="#footer" text="Centro de ajuda"/>
-          <RenderList src="#footer" text="Carreiras" />
-          <RenderList src="#footer" text="Termos de uso"/>
-          <RenderList src="#footer" text="Entre em contato"/>
+        {props.secondList && props.secondList.map((text, index) => (
+            <li key={index}>
+              <a href="#footer">{text}</a>
+            </li>
+          ))}
         </ul>
         <ul>
-          <RenderList src="#footer" text="Conta"/>
-          <RenderList src="#footer" text="Resgatar cartão pré-pago"/>
-          <RenderList src="#footer" text="Privacidade" />
-          <RenderList src="#footer" text="Teste de velocidade" />
+        {props.thirdList && props.thirdList.map((text, index) => (
+            <li key={index}>
+              <a href="#footer">{text}</a>
+            </li>
+          ))}
         </ul>
         <ul>
-          <RenderList src="#footer" text="Imprensa" />
-          <RenderList src="#footer" text="Comprar cartão pré-pago" />
-          <RenderList src="#footer" text="Preferências de cookies" />
-          <RenderList src="#footer" text="Avisos legais" />
+        {props.fourthList && props.fourthList.map((text, index) => (
+            <li key={index}>
+              <a href="#footer">{text}</a>
+            </li>
+          ))}
         </ul>
       </Lists>
       <Language>

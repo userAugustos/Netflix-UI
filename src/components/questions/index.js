@@ -8,7 +8,7 @@ import { Icon } from 'react-icons-kit';
 import { ic_navigate_next } from 'react-icons-kit/md/ic_navigate_next';
 
 import { Container } from './styles';
-import { LargeEmailInput } from '../header/styles';
+import { LargeEmailInput } from '../banner/styles';
 
 function Questions() {
   const history = useHistory();

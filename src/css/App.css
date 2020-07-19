@@ -8,6 +8,7 @@
   --darked-grey: #303030;
   --main-grey: rgba(153, 153, 153, .5);
   --font-white: rgba(246, 245, 255);
+  --alert: #fc8403;
 }
 *{
   box-sizing: border-box;
