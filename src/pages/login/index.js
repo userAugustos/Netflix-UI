@@ -18,7 +18,7 @@ function Login() {
     <Container>
       <Header />
       <FormLogin />
-      <Footer firstList={firstList} secondList={secondList} thirdList={thirdList} id="loginFooter"/>
+      <Footer firstList={firstList} secondList={secondList} thirdList={thirdList}/>
     </Container>
   );
 }

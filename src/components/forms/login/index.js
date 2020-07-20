@@ -1,23 +1,28 @@
-import React from 'react';
+import React, { useState } from 'react';
 
-import { Container, Form, InputGroup } from './styles';
+import { Container, Form, InputGroup, LoginOther } from './styles';
+import FacebookLogo from '../../../images/FB-f-Logo.png';
+
 
 function LoginForm() {
+
+  const [collapse, setCollapse] = useState(false);
+
   return (
     <Container>
-      <h2>Entrar</h2>
-      <Form>
+      <h1>Entrar</h1>
+      <Form method="POST">
         <InputGroup>
-          <label htmlFor="email">Email</label>
           <input type='email' name='email' required />
+          <label htmlFor="email">Email</label>
         </InputGroup>
         <InputGroup>
-          <label htmlFor="password">Senha</label>
           <input type='password' name='password' required />
+          <label htmlFor="password">Senha</label>
         </InputGroup>
 
         <button>Entrar</button>
-        <div>
+        <div id="checkbox">
           <div>
           <input type='checkbox' name='remember'/>
           <label htmlFor="remember">lembre-se de mim</label>
@@ -25,6 +30,14 @@ function LoginForm() {
           <a href='/'>Precisa de ajuda?</a>
         </div>
       </Form>
+      <LoginOther>
+        <a href="/login"> <img src={FacebookLogo} alt=""/> Concectar com o Facebook</a>
+        <p>Novo por aqui?<a href="/register">Assine Agora</a></p>
+        <span>Esta página é protegida pelo Google reCAPTCHA para garantir que você não é um robô. 
+          <button onClick={()=> setCollapse(!collapse)}>Saiba mais</button> 
+        </span>
+        {collapse && <p>As informações recolhidas pelo Google reCAPTCHA estão sujeitas à Política de Privacidade e Termos de Uso, e são usadas para oferecer, manter e melhorar o serviço reCAPTCHA e por questões de segurança (não são usadas para exibir anúncios personalizados pelo Google).</p> }
+      </LoginOther>
     </Container>
   );
 }

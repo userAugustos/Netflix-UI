@@ -16,6 +16,7 @@ export const Container = styled.section`
   align-items: center;
 
   #footer{
-     background: rgba(20,20,20, .80); /* passing the main-dark, but with opacity */
+     background: rgba(0,0,0, .80); /* passing the main-dark, but with opacity */
+     height: 40vh;
   }
 `;
